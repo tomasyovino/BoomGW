@@ -1,0 +1,10 @@
+export { default as Home } from '../components/pages/Home';
+export { default as Store } from '../components/pages/Store';
+export { default as Banner } from '../components/pages/sections/Banner';
+export { default as About } from '../components/pages/sections/About';
+export { default as Gallery } from '../components/pages/sections/Gallery';
+export { default as Join } from '../components/pages/sections/Join';
+export { default as Contact } from '../components/pages/sections/Contact';
+export { default as Navbar } from '../components/Navbar';
+export { default as Slideshow } from '../components/Slideshow';
+export { default as Footer } from '../components/Footer';

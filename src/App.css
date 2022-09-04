@@ -1,0 +1,316 @@
+/* ================================================================= */
+        /* ==============   GENERAL STYLES   ============== */
+/* ================================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.p-1 {
+    padding: 80px;
+}
+
+.dotted-background {
+    width: 100%;
+    height: 100%;
+    background: url("./assets/img/dott.png") repeat 0px 0px;
+}
+
+#logo {
+    position: absolute;
+    right: 5px;
+    bottom: -5px;
+    height: 100px;
+    width: 100px;
+    z-index: 99;
+}
+
+/* ================================================================= */
+        /* ==============   HOME PAGE   ============== */
+/* ================================================================= */
+
+/*? Banner */
+#banner {
+    width: 100%;
+    min-height: 100vh;
+    background: url("./assets/img/bannerBg.webp") no-repeat 0px 0px;
+    background-size: cover;
+    color: #fff;
+}
+
+#banner .dotted-background {
+    min-height: 100vh;
+    padding-top: 16px;
+}
+
+#banner .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.52);
+}
+
+#banner .header-top > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner .header-top .left, .right {
+    padding: 7px 100px;
+    flex-direction: column;
+}
+
+#banner .header-top .left h3 {
+    margin-left: 5px;
+    letter-spacing: 7px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#banner .header-top .middle span {
+    margin: 0 20px 0 5px;
+}
+
+#banner nav ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 90px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.29);
+}
+
+#banner nav ul li {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    transition: 0.5s all;
+}
+
+#banner nav ul li a {
+    padding: 0 5px;
+    transition: 0.5s all;
+}
+
+#banner nav ul li a:hover{
+    color: #fff;
+}
+
+#banner nav ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    background: #fff;
+    height: 3px;
+    width: 0;
+    left: 0;
+    transition: .5s all;
+}
+
+#banner nav ul li a:hover::before {
+    width: 100%;
+}
+
+#banner .networks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+
+#banner .networks a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    transition: 1s all;
+}
+
+#banner .networks a img {
+    height: 23px;
+    width: 20px;
+}
+
+#banner .networks a:nth-child(1):hover {
+    background-color: #7289da;
+}
+
+#banner .networks a:nth-child(2):hover {
+    background-color: #833AB4;
+}
+
+#banner .networks a:nth-child(3):hover {
+    background-color: #ff0050;
+}
+
+/*? About Us */
+
+/* MeetUs */
+#about .meetUs-bx {
+    display: flex;
+    justify-content: space-between;
+}
+
+#about .meetUs-bx .txt-content {
+    width: 50%;
+    padding: 0 25px;
+}
+
+#about .meetUs-bx .txt-content h3 {
+    font-size: 48px;
+    color: #F44336;
+}
+
+#about .meetUs-bx .txt-content p {
+    margin-top: 32px;
+    line-height: 32px;
+    color: #999;
+    font-size: 14px;
+}
+
+#about .meetUs-bx #slideshow {
+    width: 50%;
+}
+
+#about .meetUs-bx #slideshow .slide {
+    max-height: 500px;
+}
+
+#about .meetUs-bx #slideshow .slide .thumbnail {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+
+#about .meetUs-bx #slideshow #controls button {
+    color: #F44336;
+}
+
+#about .meetUs-bx #slideshow #controls button:nth-child(1):hover {
+    box-shadow: 48px 10px 157px 0px rgba(0,0,0,0.2);
+}
+#about .meetUs-bx #slideshow #controls button:nth-child(2):hover {
+    box-shadow: -48px 10px 157px 0px rgba(0,0,0,0.2);
+}
+
+/* Servers */
+#about .servers {
+    background-color: #f7f7f7;
+}
+
+#about .servers h3 {
+    text-align: center;
+    font-size: 48px;
+    color: #F44336;
+}
+
+#about .servers .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+#about .servers .container .servers-bx {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#about .servers .container .servers-bx:nth-child(3) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#about .servers .container .servers-bx div {
+    width: 70%;
+}
+#about .servers .container .servers-bx:nth-child(1) div {
+    text-align: end;
+}
+#about .servers .container .servers-bx:nth-child(2) div {
+    text-align: start;
+}
+#about .servers .container .servers-bx:nth-child(3) div {
+    text-align: center;
+}
+
+#about .servers .container .servers-bx div h4 {
+    text-transform: capitalize;
+    font-size: 19.2px;
+    color: #212121;
+    margin: 0 0 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: 1.1;
+    transition: .4s ease-in-out all;
+}
+
+#about .servers .container .servers-bx div p {
+    color: #999;
+    line-height: 28.8px;
+    font-size: 14px;
+}
+
+#about .servers .container .servers-bx i {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5c5b5b;
+    background: #e1e1e1;
+    border: 1px solid #b9b9b9;
+    border-radius: 100%;
+    transition: transform .4s ease-in-out;
+    overflow: hidden;
+}
+
+#about .servers .container .servers-bx i::after {
+    content: "";
+    width: 1px;
+    height: 1px;
+    background: none;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transition: .4s ease-in-out all;
+    border-radius: 100px;
+}
+
+#about .servers .container .servers-bx:hover h4 {
+    color: #F44336;
+}
+#about .servers .container .servers-bx:hover i {
+    color: #2c2b2b;
+}
+#about .servers .container .servers-bx:hover i::after {
+    background: #F44336;
+    transform: scale(100);
+}
