@@ -8,6 +8,7 @@ const Slideshow = ({
     speed = 500,
     interval = 5000,
     infinite = false,
+    opacityRule = false,
   }) => {
 
   const carousel = useRef(null);
@@ -24,22 +25,33 @@ const Slideshow = ({
       const firstElement = carousel.current.children[0];
 
       // Set the transition between sliders
-      carousel.current.style.transition = `${speed}ms ease-out all`;
+      carousel.current.style.transition = `${speed}ms ease-in-out all`;
 
       // Move slider
-      carousel.current.style.transform = `translateX(-${sliderSize}px)`;
-
-      const transition = () => {
-        // Reset Carousel position
-        carousel.current.style.transition = "none";
-        carousel.current.style.transform = "translateX(0)";
-
-        // Send first element to the end of the Carousel
-        carousel.current.appendChild(firstElement);
-
-        carousel.current.removeEventListener("transitionend", transition);
+      if(!opacityRule) {
+        carousel.current.style.transform = `translateX(-${sliderSize}px)`;
+      } else {
+        carousel.current.style.opacity = 0;
       }
 
+      
+      const transition = () => {
+        if(!opacityRule) {
+          // Reset Carousel position
+          carousel.current.style.transition = "none";
+          carousel.current.style.transform = "translateX(0)";
+          // Send first element to the end of the Carousel
+          carousel.current.appendChild(firstElement);
+          carousel.current.removeEventListener("transitionend", transition);
+        } else {
+          carousel.current.style.transition = `${speed}ms ease-in-out all`;
+          carousel.current.style.opacity = 1;
+          // Send first element to the end of the Carousel
+          carousel.current.appendChild(firstElement);
+          carousel.current.removeEventListener("transitionend", transition);
+        }
+      }
+      
       // Event Listener
       if (infinite) {
         carousel.current.addEventListener("transitionend", transition);
@@ -47,7 +59,7 @@ const Slideshow = ({
         carousel.current.addEventListener("transitionend", setLimitRightReached(true), setLimitLeftReached(false))
       }
     }
-  }, [speed, infinite]);
+  }, [speed, infinite, opacityRule]);
 
   const previousSlide = () => {
     // Check that the Carousel has elements

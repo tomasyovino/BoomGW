@@ -8,3 +8,4 @@ export { default as Contact } from '../components/pages/sections/Contact';
 export { default as Navbar } from '../components/Navbar';
 export { default as Slideshow } from '../components/Slideshow';
 export { default as Footer } from '../components/Footer';
+export { default as Modal } from "../components/Modal";

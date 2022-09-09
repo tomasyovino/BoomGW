@@ -14,6 +14,13 @@ a {
     color: #000;
 }
 
+h3 {
+    font-size: 48px;
+    color: #F44336;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
 .p-1 {
     padding: 80px;
 }
@@ -70,7 +77,7 @@ a {
     flex-direction: column;
 }
 
-#banner .header-top .left h3 {
+#banner .header-top .left h4 {
     margin-left: 5px;
     letter-spacing: 7px;
     font-size: 14px;
@@ -143,7 +150,7 @@ a {
     color: #fff;
     height: 40px;
     width: 40px;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     border-radius: 100%;
     transition: 1s all;
 }
@@ -181,10 +188,10 @@ a {
 #about .meetUs-bx .txt-content h3 {
     font-size: 48px;
     color: #F44336;
+    text-align: start;
 }
 
 #about .meetUs-bx .txt-content p {
-    margin-top: 32px;
     line-height: 32px;
     color: #999;
     font-size: 14px;
@@ -230,7 +237,6 @@ a {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 32px;
 }
 
 #about .servers .container .servers-bx {
@@ -313,4 +319,80 @@ a {
 #about .servers .container .servers-bx:hover i::after {
     background: #F44336;
     transform: scale(100);
+}
+
+/*? GALLERY */
+
+#gallery .image-container {
+    width: 1170px;
+    height: 955px;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    'img1 img1 img6 img3'
+    'img1 img1 img4 img4'
+    'img2 img2 img5 img5'
+    'img7 img8 img5 img5';
+}
+#gallery .image-container img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+#gallery .image-container img:nth-child(1) {
+    grid-area: img1;
+}
+#gallery .image-container img:nth-child(2) {
+    grid-area: img2;
+}
+#gallery .image-container img:nth-child(3) {
+    grid-area: img3;
+}
+#gallery .image-container img:nth-child(4) {
+    grid-area: img4;
+}
+#gallery .image-container img:nth-child(5) {
+    grid-area: img5;
+}
+#gallery .image-container img:nth-child(6) {
+    grid-area: img6;
+}
+#gallery .image-container img:nth-child(7) {
+    grid-area: img7;
+}
+#gallery .image-container img:nth-child(8) {
+    grid-area: img8;
+}
+
+#gallery .closeButton:hover {
+    background: #F2F2F2 !important;
+}
+
+/*? JOIN US */
+#joinUs {
+    background: url("./assets/img/joinUsImg.webp");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: -50% -50%;
+}
+
+#joinUs .txt-container {
+    width: 1170px;
+    margin-top: 80px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 80px 30px;
+    text-align: center;
+}
+
+#joinUs .txt-container h3 {
+    font-size: 36px;
+    color: #fff
+}
+
+#joinUs .txt-container a img {
+    height: 40px;
+    width: 40px;
 }

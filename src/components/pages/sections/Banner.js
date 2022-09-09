@@ -12,7 +12,7 @@ const Banner = () => {
         <div className="header-top">
           <div className="left">
             <h1>BOOM</h1>
-            <h3>GangWars</h3>
+            <h4>GangWars</h4>
           </div>
           <div className="middle">
             <PhoneIphone />
