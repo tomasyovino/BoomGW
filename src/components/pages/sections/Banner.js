@@ -1,5 +1,5 @@
-import { Navbar } from "../../../exports";
-import { PhoneIphone, Email, ShoppingCart } from '@mui/icons-material';
+import { Navbar, ScrollToTop } from "../../../exports";
+import { ShoppingCart } from '@mui/icons-material';
 import logo from "../../../assets/img/logo.png";
 import { Instagram } from '@mui/icons-material/';
 import discordIcon from "../../../assets/img/discord.png";
@@ -14,12 +14,6 @@ const Banner = () => {
             <h1>BOOM</h1>
             <h4>GangWars</h4>
           </div>
-          <div className="middle">
-            <PhoneIphone />
-            <span>+123 456 7890</span>
-            <Email />
-            <span>info@example.com</span>
-          </div>
           <span className="right"><ShoppingCart /></span>
         </div>
         <Navbar />
@@ -31,6 +25,7 @@ const Banner = () => {
         </div>
 
         <img src={logo} alt="BoomGW" id="logo" />
+        <ScrollToTop />
       </div>
     </div>
   )

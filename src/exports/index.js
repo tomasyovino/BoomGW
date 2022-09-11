@@ -9,3 +9,5 @@ export { default as Navbar } from '../components/Navbar';
 export { default as Slideshow } from '../components/Slideshow';
 export { default as Footer } from '../components/Footer';
 export { default as Modal } from "../components/Modal";
+export { default as Form } from "../components/Form";
+export { default as ScrollToTop } from "../components/ScrollToTop";

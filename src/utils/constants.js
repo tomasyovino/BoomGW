@@ -67,7 +67,7 @@ const AboutSliders = () => {
               zIndex: "10" 
           }}
         >
-        <iframe src="https://www.youtube.com/embed/UlndbNn5VPU" title="YouTube video player" autoplay frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1" class="thumbnail">
+        <iframe src="https://www.youtube.com/embed/UlndbNn5VPU" title="YouTube video player" autoPlay frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="1" className="thumbnail">
           Tu navegador no implementa el elemento <code>video</code>
           </iframe>
       </div>

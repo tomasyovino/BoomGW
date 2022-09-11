@@ -21,7 +21,7 @@ const About = () => {
         <div className="container">
           <div className="servers-bx">
             <div>
-              <h4>Boom Academy</h4>
+              <h4>Boom Rush Academy</h4>
               <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
             </div>
             <i><Cyclone style={{ fontSize: "24px", zIndex: "5" }} /></i>
