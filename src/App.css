@@ -13,6 +13,10 @@
     scroll-behavior: smooth;
 }
 
+body {
+    min-width: 100vh;
+}
+
 a {
     text-decoration: none;
     color: #000;
@@ -427,7 +431,8 @@ h3 {
 }
 
 #joinUs .txt-container {
-    width: 1170px;
+    width: 100%;
+    max-width: 1170px;
     margin-top: 80px;
     margin-right: auto;
     margin-left: auto;
@@ -480,6 +485,8 @@ h3 {
     flex-direction: column;
     justify-content: center;
     margin-right: 20px;
+    width: 100%;
+    max-width: 609px;
 }
 
 #contact .contact-bx .form .input-bx {
@@ -492,12 +499,14 @@ h3 {
 
 #contact .contact-bx .form div input {
     width: 100%;
+    max-width: 609px;
     outline: none;
     padding: 11px 16px;
     border: solid 1px #999;
 }
 
 #contact .contact-bx .form div textarea {
+    width: 100%;
     outline: none;
     padding: 11px 16px;
     border: solid 1px #999;
@@ -524,4 +533,197 @@ h3 {
 #contact .contact-bx .form button:hover {
     color: #F44336;
     background: #fff;
+}
+
+
+/* ==============   MEDIA QUERIES   ============== */
+/* Large Devices */
+@media (max-width: 1300px) {
+    /* Banners */
+    #banner {
+        background-position: 80% 0%;
+    }
+    
+    /* About */
+    #about .meetUs-bx {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    #about .meetUs-bx .txt-content {
+        width: 100%;
+        padding: 0 25px;
+    }
+
+    #about .meetUs-bx .txt-content h3 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #about .meetUs-bx #slideshow {
+        width: 100%;
+    }
+
+    #about .servers .container {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 15px;
+    }
+
+    #about .servers .container .servers-bx {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    #about .servers .container .servers-bx:nth-child(3) {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 0px;
+    }
+
+    #about .servers .container .servers-bx:nth-child(1) div {
+        text-align: start;
+    }
+    #about .servers .container .servers-bx:nth-child(3) div {
+        text-align: start;
+    }
+
+    /* Gallery */
+    #gallery {
+        padding: 80px 0px;
+    }
+
+    #gallery .image-container {
+        width: 100%;
+        max-width: 1000px;
+        height: 955px;
+        margin: 0 auto;
+    }
+
+    /* Contact */
+    #contact .contact-bx {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    #contact .contact-bx .form div {
+        max-width: 600px;
+    }
+}
+
+/* Medium Devices */
+@media (max-width: 1000px) {
+    #logo {
+        display: none;
+    }
+
+    /* Banner */
+    #banner .networks {
+        min-width: 100vh;
+        bottom: 20px;
+    }
+
+        /* Gallery */
+        #gallery .image-container {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas: 
+                'img4 img4 img4 img4'
+                'img2 img2 img2 img2'
+                'img5 img5 img5 img5'
+                'img8 img8 img8 img8';
+        }
+    
+        #gallery .image-container img:nth-child(1) {
+            display: none;
+        }
+        #gallery .image-container img:nth-child(2) {
+            grid-area: img2;
+        }
+        #gallery .image-container img:nth-child(3) {
+            display: none;
+        }
+        #gallery .image-container img:nth-child(4) {
+            grid-area: img4;
+        }
+        #gallery .image-container img:nth-child(5) {
+            grid-area: img5;
+        }
+        #gallery .image-container img:nth-child(6) {
+            display: none;
+        }
+        #gallery .image-container img:nth-child(7) {
+            display: none;
+        }
+        #gallery .image-container img:nth-child(8) {
+            grid-area: img8;
+        }
+}
+
+/* Small Devices */
+@media (max-width: 640px) {
+    .p-1 {
+        padding: 20px;
+    }
+
+    /* Banner */
+    #banner .header-top .left, .right {
+        padding: 7px 20px;
+    }
+
+    /* About */
+    #about .meetUs-bx .txt-content p {
+        line-height: 20px;
+    }
+
+    #about .servers .container .servers-bx div p {
+        line-height: 20px;
+    }
+
+    /* Join */
+    #Carousel .slide {
+        padding: 0px !important;
+    }
+
+    #Carousel .slide p {
+        margin: 0 auto !important;
+    }
+
+    /* Contact */
+    #contact .contact-bx .get-ticket {
+        line-height: 20px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 479px) {
+    .p-1 {
+        padding: 0px;
+    }
+
+    h3 {
+        margin-top: 32px;
+    }
+
+    /* About */
+    #about .servers .container .servers-bx {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* Contact */
+    #contact {
+        padding: 0 10px;
+    }
+
+    #contact .contact-bx .get-ticket {
+        padding-right: 20px;
+    }
+
+    #contact .contact-bx .form {
+        margin-bottom: 28px;
+    }
 }
