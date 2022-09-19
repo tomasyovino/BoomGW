@@ -98,7 +98,7 @@ const Slideshow = ({
   }, [autoplay, infinite, interval, nextSlide]);
 
   return (
-    <div id="slideshow" style={{ position: "relative", overflow: "hidden"}}>
+    <div className="slideshow" style={{ position: "relative", overflow: "hidden"}}>
       {/* {<-- CAROUSEL -->} */}
       <div id="Carousel" ref={carousel} style={{ display: "flex", flexWrap: "nowrap" }}>
         {children}
