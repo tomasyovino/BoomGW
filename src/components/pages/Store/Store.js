@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { Toaster } from "react-hot-toast";
+import ItemListContainer from "../../../containers/ItemListContainer";
 import { customFetch } from "../../../lib/utils/request";
 import { StoreNavbar, StoreBanner, Product, FooterBanner } from "../../exports";
 
@@ -16,6 +18,7 @@ const Store = () => {
 
   return (
     <div id="store">
+      <Toaster />
 
       <StoreNavbar />
 
@@ -24,12 +27,13 @@ const Store = () => {
 
         <div className='products-heading'>
           <h2>Productos Más Vendidos</h2>
-          <p>Un párrafo</p>
         </div>
 
         <div className='products-container'>
           {productData?.map((product) => <Product key={product._id} product={product} />)}
         </div>
+
+        <ItemListContainer productData={productData} />
 
         <FooterBanner footerBanner={bannerData && bannerData[0]} />
       </div>

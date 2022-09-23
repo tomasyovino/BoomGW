@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 import { urlFor } from "../../../../lib/client";
 import { Remove, Add } from '@mui/icons-material';
 import StoreNavbar from "../StoreNavbar";
+import { useStateContext } from "../../../../context/StateContext"
 
 const ProductDetails = ({ data }) => {
   const [ index, setIndex ] = useState(0);
+  const { decQty, incQty, qty, onAdd } = useStateContext();
 
   return (
     <div>
@@ -14,6 +17,7 @@ const ProductDetails = ({ data }) => {
           ?
           <div>
             <StoreNavbar />
+            <Toaster />
             <div className='product-detail-container'>
               <div>
                 <div className='image-container'>
@@ -34,18 +38,18 @@ const ProductDetails = ({ data }) => {
                 <div className="quantity">
                   <h3>Quantity</h3>
                   <p className="quantity-desc">
-                    <span className="remove" onClick=""><Remove /></span>
+                    <span className="remove" onClick={() => decQty()}><Remove /></span>
                   </p>
                   <p className="quantity-desc">
-                    <span className="num" onClick="">0</span>
+                    <span className="num">{qty}</span>
                   </p>
                   <p className="quantity-desc">
-                    <span className="add" onClick=""><Add /></span>
+                    <span className="add" onClick={() => incQty()}><Add /></span>
                   </p>
                 </div>
 
                 <div className="buttons"> 
-                  <button className="add-to-cart" type="button" onClick="">Add to Cart</button>
+                  <button className="add-to-cart" type="button" onClick={() => onAdd(data, qty)}>Add to Cart</button>
                   <button className="buy-now" type="button" onClick="">Buy Now</button>
                 </div>
                 <div className="back-container">
@@ -61,10 +65,3 @@ const ProductDetails = ({ data }) => {
 }
 
 export default ProductDetails;
-
-
-            // <div>
-            //   <span>{data.name}</span>
-            //   <span>{data.price}</span>
-            //   <img src={urlFor(data.image && data.image[0])} alt={data.name} className='store-banner-image' />
-            // </div>
