@@ -1,3 +1,4 @@
+import { Product } from "../../components/exports";
 import img1 from "../../assets/img/gallery/gallery1.webp";
 import img2 from "../../assets/img/gallery/gallery2.webp";
 import img3 from "../../assets/img/gallery/gallery3.webp";
@@ -119,4 +120,27 @@ const JoinUsSliders = () => {
   );
 }
 
-export { ImageData, AboutSliders, JoinUsSliders };
+const StoreSliders = ({productData}) => {
+  return (
+    <>
+      {
+        productData?.map((product) => (
+          <div key={product._id} className="slide"
+            style={{ 
+                    transition: ".3s ease all",
+                    position: "relative",
+                    overflow: "hidden",
+                    zIndex: "10" 
+                }}
+          >
+            <div key={product._id} className='products-container'>
+              <Product key={product._id} product={product} />
+            </div>
+          </div>
+        ))
+      }
+    </>
+  );
+}
+
+export { ImageData, AboutSliders, JoinUsSliders, StoreSliders };

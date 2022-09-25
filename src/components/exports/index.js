@@ -17,3 +17,4 @@ export { default as Form } from "../Form";
 export { default as ScrollToTop } from "../ScrollToTop";
 export { default as Product } from "../pages/Store/product/Product";
 export { default as ProductDetails } from "../pages/Store/product/ProductDetails";
+export { default as PaypalCheckoutButton } from "../PaypalCheckoutButton";

@@ -64,6 +64,12 @@ export const StateContext = ({ children }) => {
         };
     };
 
+    const purchaseMade = () => {
+        setCartItems([])
+        setTotalPrice(0)
+        setTotalQuantities(0)
+    }
+
     const incQty = () => {
         setQty((prevQty) => prevQty + 1 );
     }
@@ -92,6 +98,7 @@ export const StateContext = ({ children }) => {
                 onAdd,
                 onRemove,
                 toggleCartItemQuantity,
+                purchaseMade,
             }}
         >
             {children}

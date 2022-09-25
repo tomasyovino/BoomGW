@@ -14,7 +14,9 @@ const StoreNavbar = () => {
         </Link>
         <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
           <ShoppingCart />
+          {totalQuantities >= 1 &&
           <span className="cart-item-qty">{totalQuantities}</span>
+          }
         </button>
 
         { showCart && <Cart /> }

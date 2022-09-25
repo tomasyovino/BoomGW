@@ -6,15 +6,15 @@ const StoreBanner = ({ bannerData }) => {
   return (
     <div id="storeBanner">
       {
-        bannerData && bannerData[0]?.image
+        bannerData
           ?
             <div>
               <p className='beats-solo'>{bannerData[0]?.smallText}</p>
               <h3>{bannerData[0]?.midText}</h3>
-              {
-                bannerData[0]?.image &&
-                  <img src={urlFor(bannerData[0]?.image)} alt="product" className='store-banner-image' />
-              }
+              {/* {
+                bannerData[0]?.image[0] &&
+                  <img src={urlFor(bannerData[0]?.image && bannerData[0]?.image[0])} alt="product" className='store-banner-image' />
+              } */}
               
               <div>
                 <Link to={`/product/${bannerData[0]?.product}`}>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import { urlFor } from "../../../../lib/client";
-import { Remove, Add } from '@mui/icons-material';
+import { Remove, Add, NavigateBefore } from '@mui/icons-material';
 import StoreNavbar from "../StoreNavbar";
 import { useStateContext } from "../../../../context/StateContext"
 
@@ -19,6 +19,10 @@ const ProductDetails = ({ data }) => {
             <StoreNavbar />
             <Toaster />
             <div className='product-detail-container'>
+              <Link to="/store" className="navigate-before">
+                <NavigateBefore />
+                <span>Tienda</span>
+              </Link>
               <div>
                 <div className='image-container'>
                   <img className="product-detail-image" src={urlFor(data.image && data.image[index])} alt={data.name} />
