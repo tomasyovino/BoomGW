@@ -1,33 +1,14 @@
-import { Link } from "react-router-dom";
-import { urlFor } from "../../../../lib/client"
-
-const StoreBanner = ({ bannerData }) => {
+const StoreBanner = () => {
 
   return (
     <div id="storeBanner">
-      {
-        bannerData
-          ?
-            <div>
-              <p className='beats-solo'>{bannerData[0]?.smallText}</p>
-              <h3>{bannerData[0]?.midText}</h3>
-              {/* {
-                bannerData[0]?.image[0] &&
-                  <img src={urlFor(bannerData[0]?.image && bannerData[0]?.image[0])} alt="product" className='store-banner-image' />
-              } */}
-              
-              <div>
-                <Link to={`/product/${bannerData[0]?.product}`}>
-                  <button type='button'>{bannerData[0]?.buttonText}</button>
-                </Link>
-                <div className='desc'>
-                  <h5>Description</h5>
-                  <p>{bannerData[0]?.desc}</p>
-                </div>
-              </div>
-            </div>
-          : <div />
-      }
+      <div className='dotted-background'>
+        <span>"Cuando los ricos hacen guerra, son los pobres los que mueren..."</span>
+        <div>
+          <a href='#categories'><p>Ármate de valor</p></a>
+          <a href='#popular'><p>Observa y aprende</p></a>
+        </div>
+      </div>
     </div>
   )
 }

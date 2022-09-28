@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Toaster } from "react-hot-toast";
 import ItemListContainer from "../../../containers/ItemListContainer";
 import { customFetch } from "../../../lib/utils/request";
-import { StoreNavbar, StoreBanner, Product, FooterBanner, Slideshow } from "../../exports";
+import { StoreNavbar, StoreBanner, FooterBanner, Slideshow } from "../../exports";
 import { StoreSliders } from "../../../lib/utils/constants";
 
 const Store = () => {
@@ -22,24 +22,18 @@ const Store = () => {
       <Toaster />
 
       <StoreNavbar />
-
+      <StoreBanner />
       <div className="main-container">
-        <StoreBanner bannerData={bannerData} />
-
-        <div className='products-heading'>
+        <div className='products-heading' id="popular">
           <h2>Productos Más Vendidos</h2>
         </div>
 
         <Slideshow infinite={true} controls={true}>
           <StoreSliders productData={productData} />
         </Slideshow>
-        {/* <div className='products-container'>
-          {productData?.map((product) => <Product key={product._id} product={product} />)}
-        </div> */}
-
-        <ItemListContainer productData={productData} />
 
         <FooterBanner footerBanner={bannerData && bannerData[0]} />
+        <ItemListContainer productData={productData} />
       </div>
     </div>
   )

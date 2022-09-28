@@ -1,4 +1,5 @@
-import { Navbar, ScrollToTop } from "../../../exports";
+import { Navbar, ScrollToTop, Cart } from "../../../exports";
+import { useStateContext } from "../../../../context/StateContext";
 import { Link } from "react-router-dom";
 import { ShoppingCart } from '@mui/icons-material';
 import logo from "../../../../assets/img/logo.png";
@@ -7,6 +8,8 @@ import discordIcon from "../../../../assets/img/discord.png";
 import tiktokIcon from "../../../../assets/img/tiktok.png";
 
 const Banner = () => {
+  const { showCart, setShowCart, totalQuantities } = useStateContext();
+
   return (
     <div id="banner">
       <div className='dotted-background'>
@@ -15,7 +18,14 @@ const Banner = () => {
               <h1>BOOM</h1>
               <h4>GangWars</h4>
           </Link>
-          <span className="right"><ShoppingCart /></span>
+          <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
+            <ShoppingCart />
+            {
+              totalQuantities >= 1 &&
+                <span className="cart-item-qty">{totalQuantities}</span>
+            }
+          </button>
+          { showCart && <Cart /> }
         </div>
         <Navbar />
 

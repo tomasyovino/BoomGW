@@ -32,14 +32,33 @@ export default {
         type: 'number',
       },
       { 
-        name: 'details',
-        title: 'Details',
-        type: 'string',
+        name: 'features',
+        title: 'Features',
+        type: 'array',
+        of: [{ type: 'string' }],
+        options: {
+          hotspot: true,
+        }
+      },
+      {
+        name: "ref",
+        title: "References",
+        type: "boolean",
+      },
+      {
+        name: "refFeatures",
+        title: "Features References",
+        type: "string",
       },
       {
         name: "category",
         title: "Category",
         type: "string",
+      },
+      {
+        name: "popular",
+        title: "Popular",
+        type: "boolean",
       }
     ]
   }

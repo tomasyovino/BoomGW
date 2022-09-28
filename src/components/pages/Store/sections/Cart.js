@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { Remove, Add, NavigateBefore, LocalMall, RemoveCircle } from '@mui/icons-material';
-// import { toast } from "react-hot-toast";
 import { PaypalCheckoutButton } from "../../../exports";
 import { useStateContext } from "../../../../context/StateContext";
 import { urlFor } from "../../../../lib/client";
@@ -42,7 +41,7 @@ const Cart = () => {
         <div className="product-container">
           {cartItems.length >= 1 && cartItems.map((item) => (
             <div className="product" key={item?._id}>
-              <img src={urlFor(item.image[0])} className="cart-product-image" />
+              <img src={urlFor(item.image[0])} alt={item?.name} className="cart-product-image" />
               <div className="item-desc">
                 <div className="flex top">
                   <h5>{item?.name}</h5>
@@ -75,13 +74,6 @@ const Cart = () => {
               <h4>${totalPrice}</h4>
             </div>
             <div className="btn-container">
-              {/* <button
-                type="button"
-                className="btn"
-                onClick=""
-              >
-                Pagar con Paypal
-              </button> */}
               <PaypalCheckoutButton totalPrice={totalPrice} />
             </div>
           </div>
