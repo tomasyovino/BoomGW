@@ -413,6 +413,12 @@ h3 {
 
 /*? GALLERY */
 
+#gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #gallery .image-container {
     width: 1170px;
     height: 955px;
@@ -582,7 +588,6 @@ h3 {
 }
 
 #store .main-container {
-    max-width: 1400px; 
     width: 100%;
 }
 
@@ -1213,7 +1218,7 @@ h3 {
 }
 
 .product .cart-product-image{
-    width:180px ;
+    width: 150px;
     height: 150px;
     border-radius: 15px;
     background-color: #ebebeb;

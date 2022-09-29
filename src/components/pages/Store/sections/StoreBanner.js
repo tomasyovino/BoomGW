@@ -1,3 +1,5 @@
+import { ScrollToTop } from "../../../exports";
+
 const StoreBanner = () => {
 
   return (
@@ -5,10 +7,11 @@ const StoreBanner = () => {
       <div className='dotted-background'>
         <span>"Cuando los ricos hacen guerra, son los pobres los que mueren..."</span>
         <div>
-          <a href='#categories'><p>Ármate de valor</p></a>
           <a href='#popular'><p>Observa y aprende</p></a>
+          <a href='#categories'><p>Ármate de valor</p></a>
         </div>
       </div>
+      <ScrollToTop />
     </div>
   )
 }
