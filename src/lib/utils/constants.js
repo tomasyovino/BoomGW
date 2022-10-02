@@ -122,29 +122,18 @@ const JoinUsSliders = () => {
 
 const StoreSliders = ({productData}) => {
   return (
-    <>
+    <div className='products-container'>
       {
         productData?.map((product) => {
           if (product.popular) {
             return (
-            <div key={product._id} className="slide"
-              style={{ 
-                      transition: ".3s ease all",
-                      position: "relative",
-                      overflow: "hidden",
-                      zIndex: "10" 
-                  }}
-            >
-              <div key={product._id} className='products-container'>
                 <Product key={product._id} product={product} />
-              </div>
-            </div>
             );
           };
           return null;
         })
       }
-    </>
+    </div>
   );
 }
 

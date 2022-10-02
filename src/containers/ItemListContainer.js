@@ -3,8 +3,8 @@ import { Product } from "../components/exports";
 
 
 const ItemListContainer = ({ productData }) => {
-
     const [categorySelected, setCategorySelected] = useState("weapon");
+    const sortedProducts = productData.sort((a, b) => a.price - b.price);
 
     return (
         <div className="categories-container" id="categories">
@@ -55,7 +55,7 @@ const ItemListContainer = ({ productData }) => {
                 </div>
                 <div className="side-right">
                     {
-                        productData.map((product) => {
+                        sortedProducts.map((product) => {
                             if (product.category === categorySelected) {
                                 return (
                                     <div className="products-container">

@@ -705,6 +705,10 @@ h3 {
 
 /* Most Sold */
 
+.react-multi-carousel-list {
+    overflow: visible;
+}
+
 #store .products-heading {
     text-align: center;
     margin: 80px 0px;
@@ -757,9 +761,9 @@ h3 {
 
 #store .footer-banner-container{
     background: url("../assets/img/footerBanner.webp");
-    background-size: cover;
+    
     background-repeat: no-repeat;
-    background-position: 50% 40%;
+    background-position: 55% 80%;
     background-attachment: fixed;
     position: relative;
     height: 400px;
@@ -780,6 +784,7 @@ h3 {
 
 #store .banner-desc p{
     font-size: 22px;
+    text-align: center;
 }
 
 #store .banner-desc button{
@@ -852,8 +857,9 @@ h3 {
 /* Categories */
 
 .categories-container {
-    margin: 80px 0;
+    margin-top: 80px;
     padding: 10px;
+    padding-bottom: 80px;
     background-color: #f7f7f7;
 }
 
@@ -920,7 +926,7 @@ h3 {
     justify-content: flex-start !important;
     gap: 30px; 
     margin-top: 20px;
-    width: 200px !important;
+    width: 180px !important;
 }
 
 /* Product Details */
@@ -1143,8 +1149,9 @@ h3 {
     width: 600px;
     background-color: white;
     float: right;
-    padding: 40px 10px;
+    padding: 40px 0;
     position: relative;
+    overflow-y: auto;
 }
 
 .cart-heading{
@@ -1180,7 +1187,6 @@ h3 {
 
 .cart-wrapper .btn-container{
     width: 400px;
-    margin: auto;
 }
 
 .cart-wrapper .btn{
@@ -1209,6 +1215,7 @@ h3 {
     margin-top: 15px;
     overflow: auto;
     padding: 20px 10px;
+    padding-bottom: 40px;
 }
 
 .cart-wrapper .product{
@@ -1227,6 +1234,7 @@ h3 {
 .cart-wrapper .item-desc .flex{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 350px;
     color: #000;
 
@@ -1262,8 +1270,8 @@ h3 {
 }
 
 .cart-bottom{
-    position: absolute;
-    bottom: 12px;
+    position: fixed;
+    bottom: 0px;
     width: 100%;
     padding: 15px 65px;
     background-color: #fff;

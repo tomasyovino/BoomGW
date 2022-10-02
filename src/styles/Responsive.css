@@ -201,3 +201,108 @@
         margin-bottom: 28px;
     }
 }
+
+/* ================================================================= */
+        /* ==============   STORE PAGE   ============== */
+/* ================================================================= */
+
+/* Medium Devices */
+@media (max-width: 1000px) {
+    /* Banner */
+    #storeBanner .dotted-background span {
+        text-align: center;
+    }
+
+    /* Categories */
+    .categories-container {
+        padding: 0 5px;
+        padding-bottom: 50px;
+    }
+    .categories-container > div{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .categories-container .side {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+        width: auto;
+        border-radius: 20px;
+        background: linear-gradient(#970D1A, #2e0a07);
+        outline: hidden;
+    }
+
+    .categories-container .side-right {
+        padding-left: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .categories-container .side button {
+        width: auto;
+    }
+    .categories-container .side button {
+        border-radius: 20px;
+    }
+
+    .categories-container .side button:nth-child(1) {
+        border-radius: 20px;
+    }
+
+    .categories-container .side button:nth-child(7) {
+        border-radius: 20px;
+    }
+
+    /* Products Details */
+    .product-detail .features {
+        padding: 40px 100px;
+    }
+}
+
+/* Small Devices */
+@media (max-width: 640px) {
+    /* Header */
+    .header-top .left, .right {
+        padding: 7px 70px;
+    }
+
+    /* Banner */
+    #storeBanner .dotted-background span {
+        font-size: 1.5rem;
+    }
+
+    #storeBanner .dotted-background div {
+        justify-content: center;
+        gap: 30px;
+    }
+
+    /* Cart */
+    .cart-container {
+        width: 100%;
+    }
+
+    .cart-heading {
+        margin-left: 30px;
+    }
+
+    .cart-wrapper .item-desc .flex {
+        width: 250px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 479px) {
+    /* Products Details */
+    .product-detail .features {
+        padding: 40px 50px;
+    }
+
+    /* Cart */
+    .cart-wrapper .item-desc .flex {
+        width: 220px;
+    }
+}
