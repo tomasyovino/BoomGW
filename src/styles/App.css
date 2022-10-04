@@ -162,7 +162,7 @@ h3 {
 
 /*? BANNER */
 #banner {
-    min-width: 100vh;
+    min-width: 100vw;
     min-height: 100vh;
     background: url("../assets/img/bannerBg.webp") no-repeat 0px 0px;
     background-size: cover;
@@ -1272,7 +1272,7 @@ h3 {
 .cart-bottom{
     position: fixed;
     bottom: 0px;
-    width: 100%;
+    width: auto;
     padding: 15px 65px;
     background-color: #fff;
 }
@@ -1280,6 +1280,7 @@ h3 {
 .cart-wrapper .total{
     display: flex;
     justify-content: space-between;
+    color: #000;
 }
 .cart-wrapper .total h3{
     font-size: 22px;
