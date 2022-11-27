@@ -8,8 +8,9 @@ const About = () => {
       <div className="meetUs-bx p-1">
         <div className="txt-content">
           <h3>¡Conócenos!</h3>
-          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-          Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+          <p>¡Bienvenidos a Boom, somos una comunidad especializada en fivem que cuenta con programación propia y única! Llevamos mas de un año con la comunidad y te invitamos a que seas parte de ella!</p>
+          <p>Nuestro principal servidor es Boom Gang Wars, especializado a la guerra entre bandas. ¡Una modalidad hiper dinámica en la cual podrás practicar Aim y organización con tus miembros en robos!
+          Contamos con sistema unico de pvp, con diferentes tipos de mapeos y un sistema unico de clasificatorias 1 vs 1 donde podran competir entre si por ser el mejor!</p>
         </div>
         <Slideshow  controls="true">
           <AboutSliders />
@@ -21,7 +22,7 @@ const About = () => {
         <div className="container">
           <div className="servers-bx">
             <div>
-              <h4>Boom Rush Academy</h4>
+              <h4>Boom Gang Wars</h4>
               <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
             </div>
             <i><Cyclone style={{ fontSize: "24px", zIndex: "5" }} /></i>
@@ -30,13 +31,6 @@ const About = () => {
             <i><Cyclone style={{ fontSize: "24px", zIndex: "5" }} /></i>
             <div>
               <h4>Boom Evolved</h4>
-              <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
-            </div>
-          </div>
-          <div className="servers-bx">
-            <i><Cyclone style={{ fontSize: "24px", zIndex: "5" }} /></i>
-            <div>
-              <h4>Boom Gang Wars</h4>
               <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
             </div>
           </div>

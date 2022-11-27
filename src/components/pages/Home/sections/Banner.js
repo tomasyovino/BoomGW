@@ -30,9 +30,9 @@ const Banner = () => {
         <Navbar />
 
         <div className="networks">
-          <a href="http://localhost:3000" target="_blank" rel="noreferrer" > <img src={discordIcon} alt="Discord" /></a>
-          <a href="http://localhost:3000" target="_blank" rel="noreferrer" ><Instagram /></a>
-          <a href="http://localhost:3000" target="_blank" rel="noreferrer" ><img src={tiktokIcon} alt="Tik Tok" /></a>
+          <a href="https://discord.gg/boomgw" target="_blank" rel="noreferrer" > <img src={discordIcon} alt="Discord" /></a>
+          <a href="https://www.instagram.com/boom_argentina/" target="_blank" rel="noreferrer" ><Instagram /></a>
+          <a href="https://www.tiktok.com/@boomgangwars" target="_blank" rel="noreferrer" ><img src={tiktokIcon} alt="Tik Tok" /></a>
         </div>
 
         <img src={logo} alt="BoomGW" id="logo" />

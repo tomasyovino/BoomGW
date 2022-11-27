@@ -45,9 +45,9 @@ h3 {
 #logo {
     position: absolute;
     right: 5px;
-    bottom: -5px;
-    height: 100px;
-    width: 100px;
+    bottom: 5px;
+    height: 60px;
+    width: 60px;
     z-index: 99;
 }
 
