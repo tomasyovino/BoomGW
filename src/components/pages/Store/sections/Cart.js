@@ -7,7 +7,7 @@ import { urlFor } from "../../../../lib/client";
 
 const Cart = () => {
   const cartRef = useRef();
-  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext();
+  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove, openModal } = useStateContext();
 
   return (
     <div className="cart-wrapper" ref={cartRef}>
@@ -73,8 +73,13 @@ const Cart = () => {
               <h4>Subtotal:</h4>
               <h4>${totalPrice}</h4>
             </div>
-            <div className="btn-container">
-              <PaypalCheckoutButton totalPrice={totalPrice} />
+            <div className="btn-container buttons">
+              {/* <PaypalCheckoutButton totalPrice={totalPrice} /> */}
+              <button
+                type="button"
+                className="buy-now"
+                onClick={openModal}
+              >Ticket</button>
             </div>
           </div>
         )}

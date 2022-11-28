@@ -3,12 +3,24 @@ import { Link } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import { urlFor } from "../../../../lib/client";
 import { Remove, Add, NavigateBefore } from '@mui/icons-material';
-import StoreNavbar from "../StoreNavbar";
+import { StoreNavbar, Ticket } from "../../../exports";
 import { useStateContext } from "../../../../context/StateContext"
+import Modal from "react-modal";
+
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
 
 const ProductDetails = ({ data }) => {
   const [ index, setIndex ] = useState(0);
-  const { decQty, incQty, qty, onAdd } = useStateContext();
+  const { decQty, incQty, qty, onAdd, modalIsOpen, closeModal } = useStateContext();
 
   return (
     <div>
@@ -53,7 +65,6 @@ const ProductDetails = ({ data }) => {
 
                   <div className="buttons"> 
                     <button className="add-to-cart" type="button" onClick={() => onAdd(data, qty)}>Agregar al Carrito</button>
-                    <button className="buy-now" type="button" onClick="">Comprar</button>
                   </div>
                   <div className="back-container">
                     <Link className="back-to-store" to="/store"><span>Seguir comprando</span></Link>
@@ -76,6 +87,14 @@ const ProductDetails = ({ data }) => {
                 </ul>
               </div>
             </div>
+            <Modal
+              isOpen={modalIsOpen}
+              onRequestClose={closeModal}
+              style={customStyles}
+              contentLabel="Example Modal"
+            >
+              <Ticket />
+            </Modal>
           </div>
           : <div />
       }

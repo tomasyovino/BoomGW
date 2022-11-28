@@ -1,12 +1,27 @@
 import { useEffect, useState } from "react";
+import { useStateContext } from "../../../context/StateContext";
+import Modal from "react-modal";
 import { Toaster } from "react-hot-toast";
 import ItemListContainer from "../../../containers/ItemListContainer";
 import { customFetch } from "../../../lib/utils/request";
-import { StoreNavbar, StoreBanner, FooterBanner, Product } from "../../exports";
+import { StoreNavbar, StoreBanner, FooterBanner, Product, Ticket } from "../../exports";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
+
 const Store = () => {
+  const { modalIsOpen, closeModal } = useStateContext();
+
   const [productData, setProductData] = useState([]);
   const [bannerData, setBannerData] = useState([]);
 
@@ -33,7 +48,7 @@ const Store = () => {
     },
     mobile: {
         breakpoint: { max: 600, min: 0 },
-        items: 2
+        items: 1
     }
   };
 
@@ -65,6 +80,15 @@ const Store = () => {
 
         <FooterBanner footerBanner={bannerData && bannerData[0]} />
         <ItemListContainer productData={productData} />
+
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          style={customStyles}
+          contentLabel="Example Modal"
+        >
+          <Ticket />
+        </Modal>
       </div>
     </div>
   )

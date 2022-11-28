@@ -9,9 +9,9 @@ export const StateContext = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalQuantities, setTotalQuantities] = useState(0);
   const [qty, setQty] = useState(1);
+  const [modalIsOpen, setIsOpen] = useState(false);
 
   let foundProduct;
-  let index;
 
   const onAdd = (product, quantity) => {
     const checkProductInCart = cartItems.find(
@@ -95,11 +95,24 @@ export const StateContext = ({ children }) => {
     });
   };
 
+  const openModal = () => {
+    setShowCart(false)
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    purchaseMade();
+    setIsOpen(false);
+  };
+
   return (
     <Context.Provider
       value={{
         showCart,
+        openModal,
         setShowCart,
+        modalIsOpen,
+        closeModal,
         cartItems,
         totalPrice,
         totalQuantities,
