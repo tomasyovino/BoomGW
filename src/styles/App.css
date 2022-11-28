@@ -40,6 +40,7 @@ h3 {
     width: 100%;
     height: 100%;
     background: url("../assets/img/dott.png") repeat 0px 0px;
+    padding: 0 10px;
 }
 
 #logo {
@@ -122,6 +123,67 @@ h3 {
 
 .footer span span {
     color: #f44336;
+}
+
+/*? TICKET */
+.ticket {
+    text-align: center;
+}
+
+.ticket .ticket-header {
+    margin-bottom: 20px;
+}
+
+.ticket .ticket-header h2 {
+    font-size: 40px;
+    color: #F44336;
+    margin-bottom: 10px;
+}
+
+.ticket .ticket-header p a {
+    color: #F44336;
+    transition: .5s all;
+}
+.ticket .ticket-header p a:hover {
+    color: #922a22;
+}
+
+.ticket .ticket-body h5 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.ticket .ticket-body table {
+    width: 100%;
+}
+
+.ticket .ticket-body table thead tr th {
+    border-bottom: 1px solid rgba(71, 71, 71, 0.575);
+}
+
+.ticket .ticket-body td {
+    padding: 10px 5px;
+}
+
+.ticket .ticket-body span {
+    display: block;
+    text-align: end;
+    padding: 10px 5px;
+    font-weight: 600;
+}
+
+.ticket .ticket-body button {
+    padding: 10px 12px;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    background-color: #f02d34;
+    color: #fff;
+    cursor: pointer;
+    transform: scale(1, 1);
+    transition: transform 0.5s ease;
 }
 
 /* ================================================================= */
@@ -594,7 +656,7 @@ h3 {
 /* Store Banner */
 
 #storeBanner {
-    background: url("../assets/img/gallery/gallery8.webp");
+    background: url("../assets/img/storeBanner.webp");
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -611,9 +673,11 @@ h3 {
 }
 
 #storeBanner .dotted-background div {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 #storeBanner .dotted-background div a {
@@ -706,7 +770,7 @@ h3 {
 /* Most Sold */
 
 .react-multi-carousel-list {
-    overflow: visible;
+    overflow: hidden;
 }
 
 #store .products-heading {
@@ -747,6 +811,10 @@ h3 {
 }
 
 #store .product-image{
+    max-width: 250px;
+    width: 100%;
+    max-height: 250px;
+    height: 100%;
     border-radius: 15px;
     background-color: #ebebeb;  
     transform: scale(1, 1);
@@ -1053,7 +1121,7 @@ h3 {
     transform: scale(1, 1);
     transition: transform 0.5s ease;
 }
-.buttons .add-to-cart:hover{
+.buttons .add-to-cart:hover, .buttons .buy-now:hover{
     transform:scale(1.1,1.1)
 }
 
@@ -1069,9 +1137,6 @@ h3 {
     cursor: pointer;
     transform: scale(1, 1);
     transition: transform 0.5s ease;
-}
-.buttons .buy-now:hover{
-    transform:scale(1.1,1.1)
 }
 
 .product-detail .features {
@@ -1186,6 +1251,8 @@ h3 {
 }
 
 .cart-wrapper .btn-container{
+    display: flex;
+    justify-content: center;
     width: 400px;
 }
 
@@ -1271,9 +1338,14 @@ h3 {
 
 .cart-bottom{
     position: fixed;
-    bottom: 0px;
-    width: auto;
-    padding: 15px 65px;
+    bottom: 0;
+    max-width: 100%;
+    padding-bottom: 20px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #fff;
 }
 
@@ -1281,6 +1353,9 @@ h3 {
     display: flex;
     justify-content: space-between;
     color: #000;
+    max-width: 600px;
+    width: 100%;
+    padding: 5px 60px;
 }
 .cart-wrapper .total h3{
     font-size: 22px;

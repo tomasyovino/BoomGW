@@ -87,7 +87,7 @@
 
     /* Banner */
     #banner .networks {
-        min-width: 100vh;
+        /* min-width: 100vh; */
         bottom: 20px;
     }
 
@@ -146,6 +146,10 @@
     /* Banner */
     #banner .header-top .left, .right {
         padding: 7px 20px;
+    }
+
+    #banner nav ul {
+        gap: 5px;
     }
 
     /* About */
@@ -266,8 +270,16 @@
 /* Small Devices */
 @media (max-width: 640px) {
     /* Header */
-    .header-top .left, .right {
-        padding: 7px 70px;
+    .header-top {
+        padding: 0 10px;
+    }
+
+    .header-top .left {
+        padding: 7px 0;
+    }
+
+    .header-top .cart-icon {
+        margin: 7px 0;
     }
 
     /* Banner */
