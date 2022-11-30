@@ -8,7 +8,7 @@ const ItemListContainer = ({ productData }) => {
     const [postsPerPage, setPostsPerPage] = useState(8);
 
     const sortedProducts = productData.sort((a, b) => a.price - b.price);
-    const newProductsArray = sortedProducts.filter(item => item.category == categorySelected);
+    const newProductsArray = sortedProducts.filter(item => item.category === categorySelected);
     const lastPostIndex = currentPage * postsPerPage;
     const firstPostIndex = lastPostIndex - postsPerPage;
     const currentPosts = newProductsArray.slice(firstPostIndex, lastPostIndex);
@@ -23,8 +23,7 @@ const ItemListContainer = ({ productData }) => {
             <div>
                 <div className="side">
                     <button 
-                        className={ categorySelected === "weapon" ? "category-selected" : "" } 
-                        // onClick={() => setCategorySelected("weapon")}
+                        className={ categorySelected === "weapon" ? "category-selected" : "" }
                         onClick={() => categoriesHandler("weapon")}
                     >
                         Armamento
@@ -32,49 +31,42 @@ const ItemListContainer = ({ productData }) => {
                     <button 
                         className={ categorySelected === "gangs" ? "category-selected" : "" } 
                         onClick={() => categoriesHandler("gangs")}
-                        // onClick={() => setCategorySelected("gangs")}
                     >
                         Bandas
                     </button>
                     <button 
                         className={ categorySelected === "assetsGangs" ? "category-selected" : "" } 
                         onClick={() => categoriesHandler("assetsGangs")}
-                        // onClick={() => setCategorySelected("assetsGangs")}
                     >
                         Activos Bandas
                     </button>
                     <button 
                         className={ categorySelected === "vip" ? "category-selected" : "" } 
                         onClick={() => categoriesHandler("vip")}
-                        // onClick={() => setCategorySelected("vip")}
                     >
                         VIP
                     </button>
                     <button 
                         className={ categorySelected === "personal" ? "category-selected" : "" } 
                         onClick={() => categoriesHandler("personal")}
-                        // onClick={() => setCategorySelected("personal")}
                     >
                         Personales
                     </button>
                     <button 
                         className={ categorySelected === "cars" ? "category-selected" : "" } 
                         onClick={() => categoriesHandler("cars")}
-                        // onClick={() => setCategorySelected("cars")}
                     >
                         Vehículos
                     </button>
                     <button 
                         className={ categorySelected === "serverCars" ? "category-selected" : "" } 
                         onClick={() => categoriesHandler("serverCars")}
-                        // onClick={() => setCategorySelected("serverCars")}
                     >
                         Vehículos del Servidor
                     </button>
                     <button 
                         className={ categorySelected === "admin" ? "category-selected" : "" } 
                         onClick={() => categoriesHandler("admin")}
-                        // onClick={() => setCategorySelected("admin")}
                     >
                         Administrativas
                     </button>

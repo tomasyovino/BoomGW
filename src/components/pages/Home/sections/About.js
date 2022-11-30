@@ -23,7 +23,7 @@ const About = () => {
           <div className="servers-bx">
             <div>
               <h4>Boom Gang Wars</h4>
-              <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+              <p>Bandas, mafias, deathmath competitivo. Boom Gang Wars es un servidor dinámico y entretenido para pasar el tiempo con tus amigos, mientras compites y mejoras en GTA</p>
             </div>
             <i><Cyclone style={{ fontSize: "24px", zIndex: "5" }} /></i>
           </div>
@@ -31,7 +31,7 @@ const About = () => {
             <i><Cyclone style={{ fontSize: "24px", zIndex: "5" }} /></i>
             <div>
               <h4>Boom Evolved</h4>
-              <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+              <p>¿Vivir de tu propia cosecha? Listo. ¿Ser el padrino de la ciudad? Listo. ¿Unirte a las fuerzas policiales y ascender luchando contra el crímen? Listo. ¡Boom Evolved, un servidor de roleplay y deathmath!</p>
             </div>
           </div>
         </div>

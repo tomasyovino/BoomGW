@@ -95,7 +95,7 @@ const JoinUsSliders = () => {
               margin: "2em auto",
               width: "81%",
               fontWeight: "300",
-        }}>Donec feugiat tellus sem, laoreet iaculis orci lobortis vel. Sed sed luctus orci, at lacinia risus. Ut porttitor ante ac tincidunt elementum. Curabitur ex dolor, condimentum vitae nunc vel, pulvinar semper justo. Vestibulum et aliquet magna, maximus dapibus enim. Vestibulum ex lectus, posuere eu viverra at, mattis et enim. Nam efficitur sem et lectus fringilla, at pharetra nulla luctus. Nunc cursus, augue ac ultricies volutpat, neque erat congue justo, ac pretium tellus eros a neque. Integer ipsum sem, consectetur a mollis ac, cursus eu ipsum.</p>
+        }}>Forma parte de una de las mejores comunidades latinoamericanas. Crea tu propia banda, unete a una o ayuda a erradicarlas del mundo. ¡Vuelvete parte de algo más grande que uno mismo! Sólo en BOOMGW</p>
       </div>
       <div className="slide"
         style={{ 
@@ -114,7 +114,7 @@ const JoinUsSliders = () => {
               margin: "2em auto",
               width: "81%",
               fontWeight: "300",
-        }}>Pellentesque urna ex, ultricies a nunc at, pretium maximus nisi. Vestibulum non auctor diam. Mauris eget consectetur mauris. Aenean leo elit, accumsan vel elit vitae, mattis ultricies lacus. Cras consectetur justo lorem, sed dictum sapien eleifend at.Donec sed orci a dui aliquam tempor. Praesent in ipsum ut nunc porttitor lacinia.Donec eu sapien et arcu dictum rutrum.Ut laoreet vitae augue at accumsan. Nam pharetra sagittis purus et condimentum. Vestibulum cursus porttitor pretium.In egestas finibus rutrum. Nulla facilisi.</p>
+        }}>¡Únete, entrena, compite. Conviertete lo mejor de lo mejor en nuestro ranking de clasificatorias! Muchos lo intentan, sólo pocos lo consiguen ¿Crees tener lo necesario?</p>
       </div>
     </>
   );
