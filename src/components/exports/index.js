@@ -19,3 +19,4 @@ export { default as Product } from "../pages/Store/product/Product";
 export { default as ProductDetails } from "../pages/Store/product/ProductDetails";
 export { default as PaypalCheckoutButton } from "../PaypalCheckoutButton";
 export { default as Ticket } from "../Ticket";
+export { default as Pagination } from "../Pagination";

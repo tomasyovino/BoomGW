@@ -257,8 +257,13 @@
         border-radius: 20px;
     }
 
-    .categories-container .side button:nth-child(7) {
+    .categories-container .side button:nth-child(8) {
         border-radius: 20px;
+    }
+
+    .pagination {
+        flex-direction: row !important;
+        gap: 2px !important;
     }
 
     /* Products Details */
@@ -269,6 +274,10 @@
 
 /* Small Devices */
 @media (max-width: 640px) {
+    #store .dotted-background {
+        padding: 0 5px;
+    }
+
     /* Header */
     .header-top {
         padding: 0 10px;
